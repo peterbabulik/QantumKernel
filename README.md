@@ -23,7 +23,7 @@ Quantum kernels leverage the principles of quantum computing to perform feature 
    └─────────┘ └──────────┘ └─────────────┘
    ```
 
-3. **Kernel Computation**
+3. **Kernel Computation** (explanation below)
    - State preparation: |ψ(x)⟩
    - Quantum evolution: U(θ)
    - Kernel value: K(x,y) = |⟨ψ(x)|U(θ)|ψ(y)⟩|²
@@ -175,3 +175,17 @@ Contributions welcome! Areas of interest:
 <div align="center">
 🔬 Exploring the quantum advantage in kernel methods 🔬
 </div>
+
+Here's an explanation of kernel computation in quantum machine learning, breaking down the three steps you mentioned:
+State Preparation: |ψ(x)⟩
+ * Quantum State: This represents the initial state of the quantum system. It's created by encoding the classical data point x into a quantum state. This is often done using a technique called a quantum feature map.
+ * Feature Map: This is a function that maps classical data points to quantum states. It's designed to capture the relevant features of the data in a way that can be efficiently processed by a quantum computer.
+Quantum Evolution: U(θ)
+ * Quantum Gate: This is a unitary operation that acts on the quantum state. It's parameterized by θ, which allows for learning and optimization.
+ * Evolution: Applying U(θ) to the initial state |ψ(x)⟩ transforms it into a new state |ψ'(x)⟩ = U(θ)|ψ(x)⟩. This transformation can be thought of as a way of extracting features from the data in a way that's not possible with classical computers.
+Kernel Value: K(x,y) = |⟨ψ(x)|U(θ)|ψ(y)⟩|²
+ * Inner Product: This calculates the overlap between the two quantum states |ψ'(x)⟩ and |ψ'(y)⟩. It measures how similar the two data points x and y are in the transformed feature space.
+ * Kernel Function: The kernel function K(x,y) is the square of the inner product. It's a measure of similarity between the two data points.
+ * Quantum Advantage: The key idea is that the quantum feature map allows us to access a high-dimensional feature space that's difficult or impossible to represent classically. This can lead to improved performance in machine learning tasks.
+In Summary:
+Kernel computation in quantum machine learning involves encoding data into quantum states, transforming them using quantum gates, and calculating the similarity between the transformed states. This process can potentially unlock new capabilities for machine learning, especially for problems that are difficult to solve with classical methods.
